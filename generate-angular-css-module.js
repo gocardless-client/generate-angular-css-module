@@ -11,19 +11,8 @@ var CSS_INJECTOR = 'var css = \'%s\';\n' +
   'head.appendChild(style);\n';
 
 var TEMPLATE = 'angular.module(\'%s\', []).run([function() {\n' +
-      CSS_INJECTOR +
-    '}]);\n';
-
-var SINGLE_MODULE_TPL = '(function(module) {\n' +
-    'try {\n' +
-    '  module = angular.module(\'%s\');\n' +
-    '} catch (e) {\n' +
-    '  module = angular.module(\'%s\', []);\n' +
-    '}\n' +
-    'module.run([function() {\n' +
-      CSS_INJECTOR +
-    '}]);\n' +
-    '})();\n';
+    CSS_INJECTOR +
+  '}]);\n';
 
 /**
  * Escape string
@@ -43,16 +32,9 @@ var escapeContent = function(content) {
  * @return {String}
  */
 function generateAngularCssModule(options) {
-  if (options.moduleName) {
-    return(util.format(SINGLE_MODULE_TPL,
-      options.moduleName,
-      options.moduleName,
-      escapeContent(options.content)));
-  } else {
-    return(util.format(TEMPLATE,
-      options.cssPath,
-      escapeContent(options.content)));
-  }
+  return(util.format(TEMPLATE,
+    options.moduleName,
+    escapeContent(options.content)));
 }
 
 module.exports = generateAngularCssModule;
