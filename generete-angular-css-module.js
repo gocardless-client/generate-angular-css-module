@@ -38,11 +38,11 @@ var escapeContent = function(content) {
 };
 
 /**
- * Generate angular templateCache from string
+ * Generate angular css module from string
  * @param  {String} options
  * @return {String}
  */
-function generateCssModule(options) {
+function generateAngularCssModule(options) {
   if (options.moduleName) {
     return(util.format(SINGLE_MODULE_TPL,
       options.moduleName,
@@ -55,4 +55,4 @@ function generateCssModule(options) {
   }
 }
 
-module.exports = generateCssModule;
+module.exports = generateAngularCssModule;

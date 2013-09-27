@@ -1,12 +1,12 @@
 {
-  "name": "generate-css-module",
+  "name": "generete-angular-css-module",
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/gocardless-client/generate-css-module.git"
+    "url": "git://github.com/gocardless-client/generete-angular-css-module.git"
   },
   "bugs": {
-    "url": "http://github.com/gocardless-client/generate-css-module/issues"
+    "url": "http://github.com/gocardless-client/generete-angular-css-module/issues"
   },
-  "main": "generate-css-module"
+  "main": "generete-angular-css-module"
 }

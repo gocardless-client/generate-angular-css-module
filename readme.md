@@ -1,4 +1,4 @@
-# generate-css-module
+# generete-angular-css-module
 
 ## Copyright and license
 
